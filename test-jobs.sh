@@ -22,6 +22,6 @@ sudo docker push lonewolf1313/website:latest
 
 
 kubectl delete -f deploy.yaml
-kubectl delete -f sevice.yaml
+kubectl delete -f service.yaml
 kubectl apply -f deploy.yaml
-kubectl apply -f sevice.yaml
+kubectl apply -f service.yaml
