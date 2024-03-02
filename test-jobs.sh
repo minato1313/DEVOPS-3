@@ -2,8 +2,8 @@
 
 
 # Assuming Dockerfile is in the root directory of your project
-sudo docker rm -f $(docker ps -qa)
-sudo docker rmi -f $(docker images -aq)
+sudo docker rm -f $(sudo docker ps -qa)
+sudo docker rmi -f $(sudo docker images -aq)
 sudo docker build -t lonewolf1313/website:latest /home/ubuntu/workspace/test-job/
 
 sudo docker run -p 85:80 -d lonewolf1313/website:latest
