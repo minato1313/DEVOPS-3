@@ -1,4 +1,4 @@
-1. test-job :-
+# 1. test-job :-
 
 
 # Assuming Dockerfile is in the root directory of your project
@@ -18,7 +18,7 @@ sudo docker push lonewolf1313/website:latest
 
 
 
-2. deploy-job :-
+# 2. deploy-job :-
 
 
 kubectl delete -f deploy.yaml
