@@ -1,0 +1,30 @@
+---
+- name: Install OpenJDK 11 and Jenkins on master
+  hosts: master
+  become: yes
+  tasks:
+    - name: Execute Shell Script
+      script: install.sh
+
+- name: Install OpenJDK 11 and Docker on test
+  hosts: test
+  become: yes
+  tasks:
+    - name: Install OpenJDK 11
+      apt:
+        name: openjdk-11-jdk
+        state: present  # Change to "absent" if you want to uninstall
+
+    - name: Install Docker
+      apt:
+        name: docker.io
+        state: present
+
+- name: Install OpenJDK 11 on K8S_M
+  hosts: K8S_M
+  become: yes
+  tasks:
+    - name: Install OpenJDK 11
+      apt:
+        name: openjdk-11-jdk
+        state: present  # Change to "absent" if you want to uninstall
